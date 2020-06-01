@@ -1,8 +1,12 @@
-package com.triazine.myapplication
+package com.triazine.myapplication.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.triazine.myapplication.Product
+import com.triazine.myapplication.ProductDatabase
+import com.triazine.myapplication.R
+import com.triazine.myapplication.adapters.ShowProductAdapter
 import kotlinx.android.synthetic.main.show_product.*
 import kotlinx.coroutines.runBlocking
 
@@ -23,12 +27,17 @@ class ShowProductActivity : AppCompatActivity() {
         var products: List<Product> = listOf()
 
         products =
-            runBlocking { ProductDatabase.getDatabase(applicationContext).productDao().getAll() }
+            runBlocking { ProductDatabase.getDatabase(
+                applicationContext
+            ).productDao().getAll() }
 
         rv_showProduct.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
-        val adapter = ShowProductAdapter(ArrayList(products), this)
+        val adapter = ShowProductAdapter(
+            ArrayList(products),
+            this
+        )
         rv_showProduct.adapter = adapter
     }
 

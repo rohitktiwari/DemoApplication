@@ -1,4 +1,4 @@
-package com.triazine.myapplication
+package com.triazine.myapplication.activity
 
 import android.content.Context
 import android.os.Bundle
@@ -8,6 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.triazine.myapplication.adapters.CreateProductAdapter
+import com.triazine.myapplication.Product
+import com.triazine.myapplication.ProductDatabase
+import com.triazine.myapplication.R
 import kotlinx.android.synthetic.main.create_product.*
 import kotlinx.coroutines.runBlocking
 import java.io.IOException
@@ -40,7 +44,10 @@ class CreateProductActivity : AppCompatActivity() {
         products = gson.fromJson(jsonFileString, listProductType)
         rvCreateProductList.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        adapter = CreateProductAdapter(products, this)
+        adapter = CreateProductAdapter(
+            products,
+            this
+        )
         rvCreateProductList.adapter = adapter
     }
 
@@ -71,7 +78,8 @@ class CreateProductActivity : AppCompatActivity() {
 
     fun insertProduct(product: Product, adapterPosition: Int) {
         runBlocking {
-            ProductDatabase.getDatabase(this@CreateProductActivity).productDao().insertAll(product)
+            ProductDatabase.getDatabase(this@CreateProductActivity)
+                .productDao().insertAll(product)
         }
         products.remove(product)
         adapter.notifyItemRemoved(adapterPosition)

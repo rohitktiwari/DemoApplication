@@ -5,6 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.triazine.myapplication.converters.Converters
 
 /**
  * Created by Rohit on 01-06-2020.
