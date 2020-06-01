@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3">
+
+    <ImageView
+        android:id="@+id/iv_productphoto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_10dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/product_name"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_25sp" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:hint="@string/product_desc"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_20sp" />
+
+        <TextView
+            android:id="@+id/tv_salePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_desc"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:hint="@string/product_salePrice"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_20sp" />
+
+        <TextView
+            android:id="@+id/tv_regPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_desc"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_toEndOf="@id/tv_salePrice"
+            android:hint="@string/product_regPrice"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_20sp" />
+
+        <Button
+            android:id="@+id/deleteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

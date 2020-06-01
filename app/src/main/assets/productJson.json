@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Shirt",
+    "desc": "Men Self Design Casual Button Down Shirt",
+    "salePrice": "999",
+    "regPrice": "1199",
+    "productPhoto": "https://www.redprints.in/wp-content/uploads/2017/04/s901993193701188121_p2_i1_w1300.jpeg",
+    "colors": [
+      "#ff00ddff",
+      "#ffcc0000",
+      "#ff669900"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jeans",
+    "desc": "Tapered Fit Men Blue Jeans",
+    "salePrice": "1499",
+    "regPrice": "1999",
+    "productPhoto": "https://5.imimg.com/data5/LE/HJ/MY-43691381/6-500x500.jpg",
+    "colors": [
+      "#ff00ddff",
+      "#ffcc0000",
+      "#ff669900"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Jacket",
+    "desc": "Full Sleeve Washed Men Denim Jacket",
+    "salePrice": "2299",
+    "regPrice": "2499",
+    "productPhoto": "https://imgaz.staticbg.com/thumb/large/oaupload/ser1/banggood/images/D1/0B/1be03e02-8f39-428f-9a8f-4cbb752b1117.jpg",
+    "colors": [
+      "#ff00ddff",
+      "#ffcc0000",
+      "#ff669900"
+    ]
+  }
+]

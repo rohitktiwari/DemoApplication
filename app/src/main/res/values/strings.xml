@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="create_product_1">Create Product 1</string>
+    <string name="create_product_2">Create Product 2</string>
+    <string name="create_product_3">Create Product 3</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_desc">Description</string>
+    <string name="product_regPrice">Regular Price</string>
+    <string name="product_salePrice">Sale Price</string>
+    <string name="delete">Delete</string>
+</resources>
